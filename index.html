@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src = "login.js" type="text/javascript"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Network Login</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  
+    
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+ 
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Login</h1>
+        
+      
+      
+      </div>
+    </div>
+    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+
+  
+  <div class="container">
+      <div class="container">
+          <div class="section">
+      
+            <div class="row">
+              <div class="col s12 center">
+   
+          <form  method="POST" class="center"  action="/Submit" > 
+
+       
+         
+           
+            
+            <label for="Username">Username</label>
+       <input type="text" id="uname"  name="uname"><br>
+       
+        
+            <label for="password">Password</label>
+          <input id="upass" name="pass" type="password" class="validate">
+          <label for="OTP">Enter OTP</label>
+       <input type="text" name="OTP" onkeypress = "return AllowNumbersOnly(event)">
+        
+        
+       
+       <script  type="text/javascript">
+         function AllowNumbersOnly(e) {
+           var code = (e.which) ? e.which : e.keyCode;
+           if (code > 31 && (code < 48 || code > 57)) {
+             e.preventDefault();
+           }
+         }
+       </script>
+       <input type="submit"  class="btn waves-effect waves-light" value="Submit"> 
+
+        
+         </form>
+         </div>
+       </div>
+      </div>
+    </div>
+    </div>
+      
+      
+    
+        <div class="parallax-container valign-wrapper">
+          <div class="section no-pad-bot">
+            <div class="container">
+              
+                <h1 class="header center teal-text text-lighten-2">Signup</h1>
+              
+            </div>
+          </div>
+          <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+        </div>
+     
+
+
+
+
+        <div class="container">
+            <div class="container">
+                <div class="section">
+            
+                  <div class="row">
+                    <div class="col s12 center">
+        
+        
+          
+          <form method="POST"  class="center" action="/submit"> 
+            <style>
+            .center {
+              margin: auto;
+              height: 50%;
+              width: 50%;
+              
+              padding: 100px;
+            }  </style>
+              
+            
+                <label for="Username">Username</label>
+                <input type="text" id="uname"  name="uname"><br>
+                <label for="pwd" data-error="Please enter a name of length minum 8 characters" data-success="Perfect!">Desired Password<span class="red-text">&nbsp;*</span></label>
+              <input id="pwd" name="pwd" type="password" class="validate" minlength="8"  required="">
+              
+              
+              <label for="cpwd" data-error="Please enter the same password again" data-success="Perfect!">Confirm password<span class="red-text">&nbsp;*</span></label>
+            
+                      
+            
+              <input id="cpwd" name="cpwd" type="password" class="validate" onkeypress="validatePassword"  required="">
+              
+              <input type="submit" id="regForm"  class="btn waves-effect waves-light" value="Register"> 
+                            <script>
+                            var password = document.getElementById('pwd'),
+  confirm_password = document.getElementById('cpwd');
+
+function validatePassword() {
+  if (password.value !== confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+password.oninput = validatePassword;
+confirm_password.oninput = validatePassword;
+</script>
+                            
+                   
+        
+          
+            
+     </form>
+</div>
+  </div>
+  </div>
+  </div>
+</div>
+    
+          <div class="footer-copyright">
+              <div class="container">
+              Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Deep shit</a>
+              </div>
+            </div>
+          </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>

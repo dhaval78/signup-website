@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<style>
+span{
+  font-size: 25px;
+  color: #ffff;
+  background-color: rgb(207, 60, 50);
+  padding: 10px;
+}
+div{
+  font-size: 25px;
+  color: #ffff;
+  background-color: rgb(236, 101, 60);
+  padding: 50px;
+}
+</style>
+<script>
+$(document).ready(function(){
+  $("#backtohome").click(function(){
+    window.location.href='/';
+  });
+});
+</script>
+<body>
+<span>Welcome : <%= profileData.name %> Your profile is Completed following is your details<br></span>
+<div>
+            Email:     <%= profileData.email %><br>
+          
+<div>
+<button class="w3-btn w3-blue" id="backtohome">Back to Home</button></p>
+</body>
+</html>

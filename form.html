@@ -1,0 +1,33 @@
+<html>
+  <body>
+ <form class="center" class="card-panel"> 
+  <style>
+  .center {
+    margin: auto;
+    height: 50%;
+    width: 50%;
+    
+    padding: 100px;
+  }  </style>
+    
+  Email ID:<br>
+  <input type="text" name="Email"><br>
+  password<br>
+  <input type="text" name="password"><br>
+  
+  enter OTP:<br>
+  <input type="text" name="OTP" onkeypress = "return AllowNumbersOnly(event)"><br>
+
+  <script type="text/javascript">
+    function AllowNumbersOnly(e) {
+      var code = (e.which) ? e.which : e.keyCode;
+      if (code > 31 && (code < 48 || code > 57)) {
+        e.preventDefault();
+      }
+    }
+  </script>
+<input type="submit" name="submit"> 
+</form>
+
+</body>
+  </html> 
