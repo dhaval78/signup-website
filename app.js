@@ -4,6 +4,5 @@ var loginController = require('./controller/loginController');
 app.set('view engine','ejs');
 app.use(express.static('./public'));
 loginController(app);
-app.listen(process.env.PORT || 5000, function(){
-    console.log("application running")
-});
+app.listen(process.env.PORT || 5000)
+    console.log("application running");
